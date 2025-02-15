@@ -1,5 +1,5 @@
 // Modified from
-// https://github.com/wannabecoffeenerd/zmk/blob/5f348932a3dfbfd1890920b9653ad0dde848a1cd/app/boards/shields/hillside_view/hillside_view.dtsi
+// https://github.com/wannabecoffeenerd/zmk/blob/5f348932a3dfbfd1890920b9653ad0dde848a1cd/app/boards/shields/hillside46/hillside46.dtsi
 //
 // | LT4  | LT3  | LT2  | LT1  | LT0  |                                 | RT0  | RT1  | RT2  | RT3  | RT4  |
 // | LM4  | LM3  | LM2  | LM1  | LM0  |                                 | RM0  | RM1  | RM2  | RM3  | RM4  |

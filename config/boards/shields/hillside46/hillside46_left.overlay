@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hillside_view.dtsi"
+#include "hillside46.dtsi"
 
 &kscan0  {
     col-gpios
