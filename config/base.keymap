@@ -1,3 +1,9 @@
+#define L_ENGRAM 0
+#define L_DVORAK 1
+#define L_SYMS 2
+#define L_NUMS 3
+#define L_NAV 4
+
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi> // requires auto-layer module
 #include <dt-bindings/zmk/keys.h>
