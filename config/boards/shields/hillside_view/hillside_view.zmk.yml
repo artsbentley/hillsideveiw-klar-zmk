@@ -1,5 +1,5 @@
 file_format: "1"
-id: hillside46
+id: hillside_view
 name: Hillside View
 type: shield
 url: https://github.com/wannabecoffeenerd/hillside
@@ -12,5 +12,5 @@ features:
   - display
   - underglow
 siblings:
-  - hillside46_left
-  - hillside46_right
+  - hillside_view_left
+  - hillside_view_right
