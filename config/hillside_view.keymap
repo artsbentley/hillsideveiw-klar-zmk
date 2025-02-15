@@ -11,6 +11,18 @@
 #include "base.keymap"
 #include "mouse.dtsi"
 
+#define QWERTY_L 0
+#define DVORAK_L 1
+#define COLEMK_L 2
+#define NAV_L    3
+#define SYM_L    4
+#define ADJ_L    5
+#define Undo   LC(Z)
+#define Cut    LC(X)
+#define Copy   LC(C)
+#define Paste  LC(V)
+#define Redo   LC(Y)
+
 &chosen {
 	zmk,matrix_transform = &five_column_transform;
 };
