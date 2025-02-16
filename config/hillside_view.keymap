@@ -72,7 +72,9 @@
     tpad_peripheral_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&glidepoint1>;
-		// all layers should be added
+
+        // all layers should be added
+
         layers = <L_DVORAK L_BASE L_SYMS L_NAV>;
         y-invert;
         scale-multiplier = <5>;
@@ -105,7 +107,6 @@
     };
 };
 
-
 // adjust mouse speed in these layers
 // &mmv_input_listener {
 //   warp {
@@ -135,16 +136,27 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        momouse: momouse {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOMOUSE";
+            bindings = <&to>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         L_BASE {
             bindings = <
-  &kp Q             &kp W               &kp F        &kp P      &kp B  &kp J  &kp L          &kp U                     &kp Y                   &bootloader
-  &kp A             &kp R               &kp S        &kp T      &kp G  &kp M  &kp N          &kp E                     &kp I                   &kp O
-  &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C        &kp D      &kp V  &kp K  &kp H          &kp COMMA                 &mt LEFT_COMMAND COMMA  &mt LEFT_SHIFT MINUS
-                                        &mkp LCLK                                            &kp ESCAPE
-  &bootloader       &sl 2               &lt 1 SPACE  &kp SPACE                &kp BACKSPACE  &mt LEFT_SHIFT BACKSPACE  &kp ENTER               &kp RIGHT_ALT
+  &kp Q             &kp W               &kp F        &kp P      &kp B  &kp J  &kp L            &kp U                     &kp Y                   &bootloader
+  &kp A             &kp R               &kp S        &kp T      &kp G  &kp M  &kp N            &kp E                     &kp I                   &kp O
+  &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C        &kp D      &kp V  &kp K  &kp H            &kp COMMA                 &mt LEFT_COMMAND COMMA  &mt LEFT_SHIFT MINUS
+                                        &mkp LCLK                                              &kp ESCAPE
+  &bootloader       &sl 2               &lt 1 SPACE  &kp SPACE                &momouse 1 LCLK  &mt LEFT_SHIFT BACKSPACE  &kp ENTER               &kp RIGHT_ALT
             >;
         };
 
@@ -169,5 +181,4 @@
         };
     };
 };
-
 
