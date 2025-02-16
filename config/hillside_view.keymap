@@ -72,6 +72,7 @@
     tpad_peripheral_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&glidepoint1>;
+		// all layers should be added
         layers = <L_DVORAK L_BASE L_SYMS L_NAV>;
         y-invert;
         scale-multiplier = <5>;
@@ -86,7 +87,7 @@
     tpad_peripheral_scroll {
         compatible = "zmk,input-behavior-listener";
         device = <&glidepoint1>;
-        layers = <L_NUMS>;
+        layers = <L_NAV>;
 
         /* NOTE: only apply input-code overriding for INPUT_EV_REL */
 
