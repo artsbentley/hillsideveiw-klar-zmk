@@ -180,11 +180,11 @@
 
         L_WM {
             bindings = <
-  &kp LA(Q)  &kp LA(W)  &kp LA(F)    &kp LA(P)  &kp LA(B)  &kp LA(J)  &kp LA(J)  &kp LA(U)       &kp LA(Y)       &trans
-  &kp LA(A)  &kp LA(R)  &kp LA(S)    &kp LA(T)  &kp LA(G)  &kp LA(M)  &kp LA(N)  &kp LA(E)       &kp LA(I)       &kp LA(O)
-  &kp LA(Z)  &kp LA(X)  &kp LA(C)    &kp LA(D)  &kp LA(V)  &kp LA(K)  &kp LA(H)  &kp LA(COMMA)   &kp LA(PERIOD)  &kp
-                        &bootloader                                              &kp
-  &kp        &kp        &kp          &kp                              &kp        &kp LEFT_SHIFT  &kp             &kp
+  &kp LA(Q)  &kp LA(W)    &kp LA(F)    &kp LA(P)  &kp LA(B)  &kp LA(J)  &kp LA(J)  &kp LA(U)       &kp LA(Y)       &trans
+  &kp LA(A)  &kp LA(R)    &kp LA(S)    &kp LA(T)  &kp LA(G)  &kp LA(M)  &kp LA(N)  &kp LA(E)       &kp LA(I)       &kp LA(O)
+  &kp LA(Z)  &kp LA(X)    &kp LA(C)    &kp LA(D)  &kp LA(V)  &kp LA(K)  &kp LA(H)  &kp LA(COMMA)   &kp LA(PERIOD)  &kp
+                          &bootloader                                              &kp
+  &kp        &bootloader  &kp          &kp                              &kp        &kp LEFT_SHIFT  &kp             &kp
             >;
         };
     };
