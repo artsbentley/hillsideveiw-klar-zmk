@@ -71,9 +71,6 @@
     tpad_peripheral_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&glidepoint1>;
-
-        // MOUSE LAYERS
-
         layers = <L_BASE L_SYM L_WM>;
         y-invert;
         scale-multiplier = <5>;
@@ -84,8 +81,6 @@
         // x-input-code = <INPUT_REL_X>;
         // y-input-code = <INPUT_REL_Y>;
     };
-
-    // SCROLLING LAYERS
 
     tpad_peripheral_scroll {
         compatible = "zmk,input-behavior-listener";
