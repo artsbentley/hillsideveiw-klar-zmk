@@ -13,6 +13,7 @@
 #include "mouse.dtsi"
 
 &chosen { zmk,matrix_transform = &five_column_transform; };
+
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
@@ -125,7 +126,7 @@
         L_NAV {
             bindings = <
   &kp N1                           &kp N2                             &kp N3             &kp N4           &kp N5      &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
-  &kp F5                           &msc SCRL_DOWN                     &msc SCRL_UP       &mkp LCLK        &mkp RCLK   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp MINUS
+  &kp F5                           &msc MOVE_Y(-5)                    &msc MOVE_Y(5)     &mkp LCLK        &mkp RCLK   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp MINUS
   &mt LEFT_SHIFT C_BRIGHTNESS_DEC  &mt LEFT_COMMAND C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &trans    &trans    &trans  &trans     &trans
                                                                       &trans                                                              &trans
   &trans                           &trans                             &trans             &trans                                 &trans    &trans  &trans     &trans
