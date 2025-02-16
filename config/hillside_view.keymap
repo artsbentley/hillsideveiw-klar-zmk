@@ -108,18 +108,18 @@
 };
 
 //
-adjust mouse speed in these layers
-&mmv_input_listener {
-//  warp {
-//    layers = <NAV>;
-//    input-processors = <&zip_xy_scaler 3 1>;
-//  };
-  precision {
-    layers = <L_SYM>;
-    input-processors = <&zip_xy_scaler 1 2>;
-  };
-};
-
+// adjust mouse speed in these layers
+// &mmv_input_listener {
+//   warp {
+//     layers = <NAV>;
+//     input-processors = <&zip_xy_scaler 3 1>;
+//   };
+//   precision {
+//     layers = <FN>;
+//     input-processors = <&zip_xy_scaler 1 2>;
+//   };
+// };
+//
 // adjust scroll speed in layers
 // &msc_input_listener {
 //   warp {
