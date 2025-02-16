@@ -1,6 +1,6 @@
 // Settings tuned for 3840 x 2160 display resolution
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000 // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 120  // 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 10 // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10  // 10
 
 #include <dt-bindings/zmk/pointing.h>
 
@@ -12,7 +12,7 @@
 };
 
 &msc {
-  acceleration-exponent = <0>;          // 0
+  acceleration-exponent = <2>;          // 0
   time-to-max-speed-ms = <800>;         // 300
   delay-ms = <200>;                     // 0
 };
