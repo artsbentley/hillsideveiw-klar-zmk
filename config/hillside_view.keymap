@@ -160,19 +160,14 @@ ZMK_COMBO(c_bootloader, &bootloader, LH3 LH2 LH0 RH0 RH2 RH3, ALL, COMBO_LAZILY_
         compatible = "zmk,keymap";
 
         default_layer {
-            /* QWERTY
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | `     |   Q   |   W   |   E   |   R   |   T   |-----------------------------------|   Y   |   U   |   I   |   O   |   P   | BKSPC |
- * | TAB   |   A   |   S   |   D   |   F   |   G   |-----------------------------------|   H   |   J   |   K   |   L   |   ;   | ENTER |
- * | CTRL  |   Z   |   X   |   C   |   V   |   B   |  ESC  |-------------------|  CAPS |   N   |   M   |   ,   |   .   |   /   |   '   |
- *                                 |  GUI  |  ALT  |SK SHFT|  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |
- */
+
 
             bindings = <
-  &kp Q  &kp W  &kp F  &kp P     &kp B                                                     &kp J     &kp L     &kp U      &kp Y    &kp SEMICOLON    
-  &kp A  &kp R  &kp S  &kp T     &kp G                                                     &kp M     &kp N     &kp E      &kp I   &kp O
-  &mt Z  &kp X  &kp C  &kp D     &kp V     &kp ESC                               &kp ESC   &kp H     &kp COMMA &kp PERIOD  &kp DOT  &kp MINUS  
-                                &kp LGUI  &kp K  &kp SPACE  &kp K    &kp K  &kp BACKSPACE  &kp ENTER  &kp RIGHT_ALT
+  &kp Q     &kp W       &kp F       &kp P       &kp B  &kp J  &kp L       &kp U          &kp Y      &kp SEMICOLON
+  &kp A     &kp R       &kp S       &kp T       &kp G  &kp M  &kp N       &kp E          &kp I      &kp O
+  &kp Z     &kp X       &kp C       &kp D       &kp V  &kp K  &kp H       &kp PERIOD     &kp COMMA  &kp SLASH
+                        &kp ESCAPE                                        &kp ESCAPE
+  &kp LGUI  &kp ESCAPE  &kp SPACE   &kp ESCAPE                &kp ESCAPE  &kp BACKSPACE  &kp ENTER  &kp RIGHT_ALT
             >;
         };
     };
