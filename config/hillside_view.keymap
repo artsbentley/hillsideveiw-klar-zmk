@@ -117,6 +117,18 @@
 //     input-processors = <&zip_xy_scaler 1 2>;
 //   };
 // };
+//
+// adjust scroll speed in layers
+// &msc_input_listener {
+//   warp {
+//     layers = <NAV>;
+//     input-processors = <&zip_scroll_scaler 2 1>;
+//   };
+//   precision {
+//     layers = <FN>;
+//     input-processors = <&zip_scroll_scaler 1 2>;
+//   };
+// };
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
