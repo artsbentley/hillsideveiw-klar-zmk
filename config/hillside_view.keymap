@@ -136,6 +136,19 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+	behaviors {
+        mo_click: behavior_mo_click {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";  // Prioritizes hold action if conflict occurs
+            tapping-term-ms = <200>;    // Adjust as needed
+            bindings = <&mo 1>, <&kp BTN_LEFT>;
+        };
+    };
+};
+
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
