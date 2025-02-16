@@ -16,6 +16,41 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            key-positions = <11 12>;
+            bindings = <&kp ESC>;
+            layers = <0 2>;
+        };
+
+        tab {
+            key-positions = <2 1>;
+            bindings = <&kp TAB>;
+            layers = <0>;
+        };
+
+        remove-word {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
+
+        control {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <33 36>;
+
+        };
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <2 7>;
+        };
+    };
+};
+
+
+/ {
 	/* assign `input-listener` to all pointing devices */
 	/* &glidepoint0 on central, &glidepoint1 on peripheral */
     tpad_central_listener {
@@ -66,40 +101,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-	{
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            key-positions = <11 12>;
-            bindings = <&kp ESC>;
-            layers = <0 2>;
-        };
-
-        tab {
-            key-positions = <2 1>;
-            bindings = <&kp TAB>;
-            layers = <0>;
-        };
-
-        remove-word {
-            bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <7 8>;
-            layers = <0>;
-        };
-
-        control {
-            bindings = <&kp LEFT_CONTROL>;
-            key-positions = <33 36>;
-
-        };
-        underscore {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <2 7>;
-        };
-    };
-
-
     keymap {
         compatible = "zmk,keymap";
 
