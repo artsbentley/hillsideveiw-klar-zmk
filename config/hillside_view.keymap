@@ -145,7 +145,7 @@
   &kp A             &kp R               &kp S        &kp T      &kp G  &kp M  &kp N          &kp E                     &kp I                   &kp O
   &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C        &kp D      &kp V  &kp K  &kp H          &kp COMMA                 &mt LEFT_COMMAND COMMA  &mt LEFT_SHIFT MINUS
                                         &mkp LCLK                                            &kp ESCAPE
-  &bootloader       &kp ESCAPE          &lt 1 SPACE  &kp SPACE                &kp BACKSPACE  &mt LEFT_SHIFT BACKSPACE  &kp ENTER               &kp RIGHT_ALT
+  &bootloader       &sl 2               &lt 1 SPACE  &kp SPACE                &kp BACKSPACE  &mt LEFT_SHIFT BACKSPACE  &kp ENTER               &kp RIGHT_ALT
             >;
         };
 
@@ -158,6 +158,17 @@
   &trans                           &trans                             &trans             &trans                                 &trans    &trans  &trans     &trans
             >;
         };
+
+        L_SYM {
+            bindings = <
+  &kp EXCL       &kp AT     &kp HASH           &kp DOLLAR     &kp PERCENT  &kp LESS_THAN   &kp LEFT_BRACKET      &kp EQUAL  &kp RIGHT_BRACKET      &kp GREATER_THAN
+  &kp QUESTION   &kp SQT    &kp DOUBLE_QUOTES  &kp SEMI       &kt TILDE    &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE
+  &kp BACKSLASH  &kp CARET  &kp PIPE           &kp AMPERSAND  &kp GRAVE    &kp SLASH       &kp UNDER             &kp MINUS  &kp PLUS               &kp STAR
+                            &trans                                                                               &trans
+  &trans         &trans     &trans             &trans                                      &trans                &trans     &trans                 &trans
+            >;
+        };
     };
 };
+
 
