@@ -142,7 +142,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";  // Prioritizes hold action if conflict occurs
             tapping-term-ms = <200>;    // Adjust as needed
-            bindings = <&mo 1>, <&kp BTN_LEFT>;
+            bindings = <&mo 1>, <&mkp LCLK>;
         };
     };
 };
