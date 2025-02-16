@@ -1,6 +1,7 @@
 #define L_BASE 0
 #define L_NAV 1
 #define L_SYM 2
+#define L_WM  3
 
 // Layers must be defined before base.keymap is imported, since it defines
 // certain entities based on the existence of layers that only exist on boards
