@@ -14,6 +14,32 @@
 
 &chosen { zmk,matrix_transform = &five_column_transform; };
 
+
+#define LOWCLK_HOLD_LIMIT 400  //configure hold time for LOWER_CLICK. hold for less than 400ms to left click
+ 
+enum custom_keycodes {
+    LOWER_CLICK = SAFE_RANGE,  //start of other macro keys           //custom macro keycode, name it what you want
+};
+ 
+uint16_t lowclk_hold_timer = 0;  //lower_click timer variable
+ 
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LOWER_CLICK:
+            if (record->event.pressed) {           //when LOWER_CLICK is pressed
+                lowclk_hold_timer = timer_read();  //  mark the time it was pressed
+                layer_on(L_NAV);                  //  go to _LOWER layer
+            } else {                               //when LOWER_CLICK is released
+                layer_off(L_NAV);                 //  leave _LOWER layer
+                if (timer_elapsed(lowclk_hold_timer) < LOWCLK_HOLD_LIMIT)
+                    tap_code16(KC_MS_BTN1);        //  left click if macro key was held for less than LOWCLK_HOLD_LIMIT ms
+            }
+            break;
+    }
+    return true;
+}
+
+
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
@@ -51,6 +77,16 @@
         underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <2 7>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        custom_lower_click: macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&hold_tap L_NAV 400 &kp MS_BTN1>;  // Hold for 400ms to switch layer, tap for left click
         };
     };
 };
@@ -120,7 +156,7 @@
   &kp A             &kp R               &kp S        &kp T      &kp G  &kp M  &kp N          &kp E                     &kp I                   &kp O
   &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C        &kp D      &kp V  &kp K  &kp H          &kp COMMA                 &mt LEFT_COMMAND COMMA  &mt LEFT_SHIFT MINUS
                                         &mkp LCLK                                            &kp ESCAPE
-  &bootloader       &kp ESCAPE          &lt 1 SPACE  &kp SPACE                &kp BACKSPACE  &mt LEFT_SHIFT BACKSPACE  &kp ENTER               &kp RIGHT_ALT
+  &bootloader       &kp ESCAPE          &lt 1 SPACE  &kp SPACE          &custom_lower_click  &mt LEFT_SHIFT BACKSPACE  &kp ENTER               &kp RIGHT_ALT
             >;
         };
 
