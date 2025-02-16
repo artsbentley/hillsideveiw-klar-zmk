@@ -1,8 +1,6 @@
 #define L_BASE 0
 #define L_NAV 1
-#define L_DVORAK 2
-#define L_SYMS 3
-#define L_NUMS 4
+#define L_SYM 2
 
 // Layers must be defined before base.keymap is imported, since it defines
 // certain entities based on the existence of layers that only exist on boards
@@ -75,7 +73,7 @@
 
         // all layers should be added
 
-        layers = <L_DVORAK L_BASE L_SYMS L_NAV>;
+        layers = <L_BASE L_SYM L_NAV>;
         y-invert;
         scale-multiplier = <5>;
 
@@ -89,12 +87,12 @@
     tpad_peripheral_scroll {
         compatible = "zmk,input-behavior-listener";
         device = <&glidepoint1>;
-        layers = <L_NAV>;
+        layers = <L_SYM>;
 
         /* NOTE: only apply input-code overriding for INPUT_EV_REL */
 
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_HWHEEL>;
+        //x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         bindings = <&ib_wheel_scaler 1 8>;
     };
