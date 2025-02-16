@@ -158,7 +158,7 @@
   &kp A             &kp R               &kp S        &kp T      &kp G  &kp M  &kp N          &kp E                     &kp I                   &kp O
   &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C        &kp D      &kp V  &kp K  &kp H          &kp COMMA                 &mt LEFT_COMMAND COMMA  &mt LEFT_SHIFT MINUS
                                         &mkp LCLK                                            &kp ESCAPE
-  &bootloader       &sl 2               &lt 1 SPACE  &kp SPACE                &kp BACKSPACE  &mt LEFT_SHIFT BACKSPACE  &kp ENTER               &kp RIGHT_ALT
+  &bootloader       &sl 2               &lt 1 SPACE  &kp SPACE                     &moclick  &mt LEFT_SHIFT BACKSPACE  &kp ENTER               &kp RIGHT_ALT
             >;
         };
 
