@@ -1,3 +1,8 @@
+#define L_BASE 0
+#define L_NAV 1
+#define L_SYM 2
+#define L_WM	3
+
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi> // requires auto-layer module
 #include <dt-bindings/zmk/keys.h>
@@ -5,13 +10,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "zmk-helpers/helper.h"
 #include "mouse.dtsi"
-
-#define L_BASE 0
-#define L_NAV 1
-#define L_SYM 2
-#define L_WM	3
-
-
 
 &chosen { zmk,matrix_transform = &five_column_transform; };
 
@@ -47,12 +45,14 @@
         control {
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <33 38>;
-        };
-		mouse_lclk {
-            bindings = <&momouse 1 LCLK>;
-            key-positions = <13 12>;
+            layers = <0>;
         };
 
+        mouse_lclk {
+            bindings = <&momouse 1 LCLK>;
+            key-positions = <13 12>;
+            layers = <0>;
+        };
     };
 };
 
