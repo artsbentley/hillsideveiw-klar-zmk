@@ -48,6 +48,11 @@
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <33 38>;
         };
+		mouse_lclk {
+            bindings = <&momouse 1 LCLK>;
+            key-positions = <13 12>;
+        };
+
     };
 };
 
