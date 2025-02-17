@@ -57,7 +57,7 @@
         compatible = "zmk,input-behavior-listener";
         device = <&glidepoint0>;
         y-invert;
-        scale-multiplier = <5>;
+        scale-multiplier = <2>;
 
         // xy-swap;
         // x-invert;
