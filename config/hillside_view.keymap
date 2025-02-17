@@ -14,7 +14,6 @@
 // certain entities based on the existence of layers that only exist on boards
 // big enough to have keys to access them.
 
-#include "hillside_view-labels.h"
 #include "mouse.dtsi"
 
 &chosen { zmk,matrix_transform = &five_column_transform; };
