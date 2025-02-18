@@ -1,3 +1,9 @@
+#define L_BASE 0
+#define L_NAV 1
+#define L_SYM 2
+#define L_WM	3
+#define L_MOUSE	4
+
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi> // requires auto-layer module
 #include <dt-bindings/zmk/keys.h>
@@ -6,12 +12,6 @@
 #include "zmk-helpers/helper.h"
 #include "mouse.dtsi"
 
-
-#define L_BASE 0
-#define L_NAV 1
-#define L_SYM 2
-#define L_WM	3
-#define L_MOUSE	4
 
 &chosen { zmk,matrix_transform = &five_column_transform; };
 
@@ -169,11 +169,11 @@
 
         L_BASE {
             bindings = <
-  &kp Q             &kp W               &kp F        &kp P        &kp B  &kp J  &kp L                 &kp U       &kp Y                    &kp A
-  &kp A             &kp R               &kp S        &kp T        &kp G  &kp M  &kp N                 &kp E       &kp I                    &kp O
-  &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C        &kp D        &kp V  &kp K  &kp H                 &kp COMMA   &mt LEFT_COMMAND PERIOD  &mt LEFT_SHIFT MINUS
+  &kp Q             &kp W               &kp F        &kp P        &kp B  &kp J  &kp L                 &kp U                     &kp Y                    &kp A
+  &kp A             &kp R               &kp S        &kp T        &kp G  &kp M  &kp N                 &kp E                     &kp I                    &kp O
+  &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C        &kp D        &kp V  &kp K  &kp H                 &kp COMMA                 &mt LEFT_COMMAND PERIOD  &mt LEFT_SHIFT MINUS
                                         &bootloader                                                   &kp ESCAPE
-  &kp LCTRL         &mo 3               &sl 2        &lt 1 SPACE                &mt LSHIFT BACKSPACE  &kp ENTER   &trans                   &kp RIGHT_ALT
+  &mo 3             &sl 2               &lt 1 SPACE  &lt 1 SPACE                &mt LSHIFT BACKSPACE  &mt LEFT_SHIFT BACKSPACE  &kp ENTER                &kp RIGHT_ALT
             >;
         };
 
