@@ -2,6 +2,7 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30  // 10
 
+#include <dt-bindings/zmk/pointing.h>
 
 // Config from @caksoylar, defaults in comments
 &mmv {
