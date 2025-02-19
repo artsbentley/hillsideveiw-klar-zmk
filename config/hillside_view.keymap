@@ -3,17 +3,17 @@
 
 #include <dt-bindings/zmk/pointing.h>
 
-// &mmv {
-//   acceleration-exponent = <1>;          // 1
-//   time-to-max-speed-ms = <1000>;       // 300
-//   delay-ms = <200>;                    // 0
-// };
-// 
-// &msc {
-//   acceleration-exponent = <2>;          // 0
-//   time-to-max-speed-ms = <800>;        // 300
-//   delay-ms = <200>;                    // 0
-// };
+&mmv {
+  acceleration-exponent = <1>;          // 1
+  time-to-max-speed-ms = <1000>;       // 300
+  delay-ms = <200>;                    // 0
+};
+
+&msc {
+  acceleration-exponent = <2>;          // 0
+  time-to-max-speed-ms = <800>;        // 300
+  delay-ms = <200>;                    // 0
+};
 
 &chosen { zmk,matrix-transform = &five_column_transform; };
 
