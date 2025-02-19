@@ -1,18 +1,21 @@
-#define L_BASE 0
-#define L_NAV 1
-#define L_SYM 2
-#define L_WM	3
-#define L_MOUSE	4
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30  // 10
 
-#include <behaviors.dtsi>
-#include <behaviors/num_word.dtsi> // requires auto-layer module
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
-#include "mouse.dtsi"
+#include <dt-bindings/zmk/pointing.h>
 
+&mmv {
+  acceleration-exponent = <1>;          // 1
+  time-to-max-speed-ms = <1000>;       // 300
+  delay-ms = <200>;                    // 0
+};
 
-&chosen { zmk,matrix_transform = &five_column_transform; };
+&msc {
+  acceleration-exponent = <2>;          // 0
+  time-to-max-speed-ms = <800>;        // 300
+  delay-ms = <200>;                    // 0
+};
+
+&chosen { zmk,matrix-transform = &five_column_transform; };
 
 &mt {
     quick-tap-ms = <100>;
@@ -21,10 +24,10 @@
     tapping-term-ms = <170>;
 };
 
+// Remaining configuration
 / {
     combos {
         compatible = "zmk,combos";
-
         combo_esc {
             key-positions = <11 12>;
             bindings = <&kp ESC>;
@@ -61,20 +64,13 @@
             layers = <0>;
         };
     };
-};
 
-/ {
-    /* assign `input-listener` to all pointing devices */
-    /* &glidepoint0 on central, &glidepoint1 on peripheral */
-
+    // Input listeners for glidepoints
     tpad_central_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&glidepoint0>;
         y-invert;
         scale-multiplier = <3>;
-
-        // xy-swap;
-        // x-invert;
     };
 
     tpad_peripheral_listener {
@@ -83,21 +79,12 @@
         layers = <L_BASE L_SYM L_WM>;
         y-invert;
         scale-multiplier = <3>;
-
-        /* NOTE: do NOT override event code here, */
-        /*       let Cirque glidepoint reports click from taps */
-        // evt-type = <INPUT_EV_REL>;
-        // x-input-code = <INPUT_REL_X>;
-        // y-input-code = <INPUT_REL_Y>;
     };
 
     tpad_peripheral_scroll {
         compatible = "zmk,input-behavior-listener";
         device = <&glidepoint1>;
         layers = <L_NAV L_MOUSE>;
-
-        /* NOTE: only apply input-code overriding for INPUT_EV_REL */
-
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
@@ -111,6 +98,7 @@
         input-code = <INPUT_REL_WHEEL>;
     };
 };
+
 
 // adjust mouse speed in these layers
 // &mmv_input_listener {
