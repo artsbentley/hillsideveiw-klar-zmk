@@ -14,6 +14,25 @@
 
 &chosen { zmk,matrix_transform = &five_column_transform; };
 
+
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10  // 10
+
+
+// Config from @caksoylar, defaults in comments
+&mmv {
+  acceleration-exponent = <1>;          // 1
+  time-to-max-speed-ms = <1000>;         // 300
+  delay-ms = <200>;                     // 0
+};
+
+&msc {
+  acceleration-exponent = <2>;          // 0
+  time-to-max-speed-ms = <800>;         // 300
+  delay-ms = <200>;                     // 0
+};
+
+
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
