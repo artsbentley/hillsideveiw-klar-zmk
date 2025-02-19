@@ -3,6 +3,13 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10  // 10
 
 #include <dt-bindings/zmk/pointing.h>
+#include <behaviors.dtsi>
+#include <behaviors/num_word.dtsi> // requires auto-layer module
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include "mouse.dtsi"
+
 
 // Config from @caksoylar, defaults in comments
 &mmv {
