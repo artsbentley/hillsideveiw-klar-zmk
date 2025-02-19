@@ -4,6 +4,9 @@
 #define L_WM	3
 #define L_MOUSE	4
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30  // 10
+
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi> // requires auto-layer module
 #include <dt-bindings/zmk/keys.h>
