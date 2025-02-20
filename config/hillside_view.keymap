@@ -53,6 +53,7 @@
             bindings = <&mkp LCLK>;
             key-positions = <13 12>;
             layers = <0>;
+			require-prior-idle-ms = <50>;
         };
 
         mouse_rclk {
