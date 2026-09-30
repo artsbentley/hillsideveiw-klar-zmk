@@ -3,6 +3,8 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30  // 10
 
 #include <dt-bindings/zmk/pointing.h>
+// Define the behaviors after the speed defaults, but before overriding their nodes.
+#include <behaviors.dtsi>
 
 // Config from @caksoylar, defaults in comments
 &mmv {
